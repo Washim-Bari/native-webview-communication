@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webview</title>
+    <script>
+        function sendMessageToReactNative() {
+            // This will depend on the React Native Webview setup
+            window.ReactNativeWebView.postMessage("navigateToComponent");
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Webview</h1>
+    <button onclick="sendMessageToReactNative()">Navigate to React Native Component</button>
+</body>
+
+</html>
