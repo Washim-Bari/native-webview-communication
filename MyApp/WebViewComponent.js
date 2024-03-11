@@ -8,6 +8,7 @@ const WebViewComponent = () => {
   const handleMessage = event => {
     const message = event.nativeEvent.data;
     if (message === 'navigateToComponent') {
+      // Call the npm package
       navigation.navigate('ReactNativeComponent', {
         someData: 'Data from WebView',
       });
@@ -17,7 +18,7 @@ const WebViewComponent = () => {
   return (
     <WebView
       source={{
-        uri: 'http://192.168.0.102:5500//native-webview-communication/web/index.html',
+        uri: 'http://192.168.0.102:5500/web/index.html',
       }}
       onMessage={handleMessage}
     />
