@@ -6,8 +6,8 @@ const WebViewComponent = () => {
   const navigation = useNavigation();
 
   const handleMessage = event => {
-    const message = event.nativeEvent.data;
-    if (message === 'navigateToComponent') {
+    const data = JSON.parse(event.nativeEvent.data);
+    if (data.message === 'navigateToComponent') {
       // Call the npm package
       navigation.navigate('ReactNativeComponent', {
         someData: 'Data from WebView',

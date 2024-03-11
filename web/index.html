@@ -8,7 +8,8 @@
     <script>
         function sendMessageToReactNative() {
             // This will depend on the React Native Webview setup
-            window.ReactNativeWebView.postMessage("navigateToComponent");
+            // postMessage function can only send one message as string. To send data like object or array we can use JSON.stringify() method
+            window.ReactNativeWebView.postMessage(JSON.stringify({ type: 'comp1', message: "navigateToComponent" }));
         }
     </script>
 </head>
